@@ -1,0 +1,54 @@
+* {
+  font-family: 'Albert Sans', sans-serif;
+  margin: 0;
+}
+
+.nav-block {
+  position: fixed;
+  padding-top: 3%;
+  right: 0;
+  height: 100%;
+  width: 15%;
+  background-color: rgb(104, 8, 21);
+}
+
+.masthead-wrap {
+  position: fixed;
+  bottom: 10%;
+  left: 4%;
+  /* margin-left: 15px; */
+}
+
+.masthead {
+  font-size: 20vw ;
+  line-height: 0.8em;
+  letter-spacing: -0.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.subhead {
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 500; 
+  font-size: 1.8vw ;
+  letter-spacing: 0rem;
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
+  padding-left: 15px;
+}
+
+.nav-ul {
+  color: white;
+  padding-left: 20%;
+  font-size: 1.5em;
+  line-height: 2.4em;
+  list-style: none;
+}
+
+.dirt-pic {
+  position: fixed;
+  right: 15%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
