@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
   return (
     <>
-      <div className="nav-block">
+      <nav className="nav-block">
         <ul className="nav-ul">
           <p>icon</p>
           <Link to={'/trailjournal'}>
@@ -20,10 +20,10 @@ const Nav = () => {
             <li className="nav-li">My setup</li>
           </Link>
           <Link to={'/'}>
-            <button>Home</button>
+            <button className="home-button">Home</button>
           </Link>
         </ul>
-      </div>
+      </nav>
     </>
   )
 }
