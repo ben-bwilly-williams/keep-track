@@ -1,11 +1,11 @@
-// import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-// const TrailJournal = () => {
-//   return (
-//     <>
-//       <h2>Trail journal</h2>
-//     </>
-//   )
-// }
+const TrailJournal = () => {
+  return (
+    <>
+      <h2>Journal page</h2>
+    </>
+  )
+}
 
-// export default TrailJournal
+export default TrailJournal

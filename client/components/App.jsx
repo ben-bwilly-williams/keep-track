@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 // import { getGreeting } from '../apiClient'
-import { Route, Routes, Router } from 'react-router-dom'
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 
 import Nav from './Nav'
 import Home from './Home'
-// import TrailJournal from './TrailJournal'
+import TrailJournal from './TrailJournal'
 
 const App = () => {
   // const [greeting, setGreeting] = useState('')
@@ -26,14 +26,14 @@ const App = () => {
 
   return (
     <>
-      {/* <Router> */}
-      <Nav />
-      <Home />
-      {/* <Routes>
-        <Route path="/" element={<Home />} /> */}
-      {/* <Route path="/trailjournal" element={<TrailJournal />} /> */}
-      {/* </Routes> */}
-      {/* </Router> */}
+      <Router>
+        <Nav />
+        {/* <Home /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/trailjournal" element={<TrailJournal />} />
+        </Routes>
+      </Router>
       {/* {count} */}
       {/* <h1>{greeting}</h1> */}
       {/* {isError && (
