@@ -1,9 +1,19 @@
 import React from 'react'
 
+import TrailCard from './TrailCard'
+
 const TrailJournal = () => {
   return (
     <>
-      <h2>Journal page</h2>
+      <div className="card-container">
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+      </div>
     </>
   )
 }

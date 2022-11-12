@@ -3,6 +3,15 @@
   margin: 0;
 }
 
+.dirt-pic {
+  position: fixed;
+  right: 13%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .masthead-wrap {
   position: absolute;
   bottom: 125px;
@@ -29,6 +38,9 @@
 
 .nav-block {
   position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
   padding-top: 100px;
   right: 0;
   height: 100%;
@@ -43,15 +55,6 @@
   font-size: 1.45em;
   line-height: 2.6em;
   list-style: none;
-}
-
-.dirt-pic {
-  position: fixed;
-  right: 13%;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
 }
 
 a {
@@ -76,9 +79,60 @@ a:hover {
   cursor: pointer;
 }
 
+.trail-card {
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px #999;
+  padding: 15px;
+  margin: 12px;
+  width: 160px;
+  height: 220px;
+  list-style: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  margin: 100px;
+  width: 74%;
+}
 
 /* @media (max-width: 780px) {
   .masthead {
     font-size: 15em ;
   }
+} */
+
+
+/* create new blog form */
+/* .create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 } */

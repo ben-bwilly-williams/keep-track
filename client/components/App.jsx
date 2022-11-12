@@ -8,6 +8,7 @@ import TrailJournal from './TrailJournal'
 import WishList from './WishList'
 import BikeCheck from './BikeCheck'
 import MySetup from './MySetup'
+import TrailView from './TrailFull'
 
 const App = () => {
   // const [greeting, setGreeting] = useState('')
@@ -31,10 +32,10 @@ const App = () => {
     <>
       <Router>
         <Nav />
-        {/* <Home /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trailjournal" element={<TrailJournal />} />
+          <Route path="/trailjournal/:name" element={<TrailView />} />
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/bike-check" element={<BikeCheck />} />
           <Route path="/my-setup" element={<MySetup />} />
