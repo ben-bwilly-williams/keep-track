@@ -3,52 +3,136 @@
   margin: 0;
 }
 
-.nav-block {
+.dirt-pic {
   position: fixed;
-  padding-top: 3%;
-  right: 0;
+  right: 13%;
   height: 100%;
-  width: 15%;
-  background-color: rgb(104, 8, 21);
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .masthead-wrap {
-  position: fixed;
-  bottom: 10%;
-  left: 4%;
+  position: absolute;
+  bottom: 125px;
+  left: 80px;
   /* margin-left: 15px; */
 }
 
 .masthead {
-  font-size: 20vw ;
+  font-size: 15vw ;
   line-height: 0.8em;
-  letter-spacing: -0.8rem;
+  letter-spacing: -0.7rem;
   color: rgb(255, 255, 255);
 }
 
 .subhead {
   font-family: 'Albert Sans', sans-serif;
   font-weight: 500; 
-  font-size: 1.8vw ;
+  font-size: 1.5vw ;
   letter-spacing: 0rem;
   color: rgb(255, 255, 255);
   margin-top: 30px;
   padding-left: 15px;
 }
 
+.nav-block {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 100px;
+  right: 0;
+  height: 100%;
+  width: 13%;
+  background-color: rgb(104, 8, 21);
+}
+
 .nav-ul {
   color: white;
-  padding-left: 20%;
-  font-size: 1.5em;
-  line-height: 2.4em;
+  font-weight: 400;
+  padding-left: 17%;
+  font-size: 1.45em;
+  line-height: 2.6em;
   list-style: none;
 }
 
-.dirt-pic {
-  position: fixed;
-  right: 15%;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
+a {
+  text-decoration: none;
+  color: white;
 }
+
+a:hover {
+  color: rgb(255, 201, 83);
+}
+
+.home-button {
+  font-size: 0.75em;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 90px;
+  height: 50px;
+  background-color: rgb(69, 16, 16);
+  position: fixed;
+  bottom: 12%;
+  cursor: pointer;
+}
+
+.trail-card {
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px #999;
+  padding: 15px;
+  margin: 12px;
+  width: 160px;
+  height: 220px;
+  list-style: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  margin: 100px;
+  width: 74%;
+}
+
+/* @media (max-width: 780px) {
+  .masthead {
+    font-size: 15em ;
+  }
+} */
+
+
+/* create new blog form */
+/* .create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+} */

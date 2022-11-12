@@ -1,11 +1,21 @@
-// import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-// const TrailJournal = () => {
-//   return (
-//     <>
-//       <h2>Trail journal</h2>
-//     </>
-//   )
-// }
+import TrailCard from './TrailCard'
 
-// export default TrailJournal
+const TrailJournal = () => {
+  return (
+    <>
+      <div className="card-container">
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+      </div>
+    </>
+  )
+}
+
+export default TrailJournal
