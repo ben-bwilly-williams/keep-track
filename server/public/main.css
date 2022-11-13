@@ -82,7 +82,7 @@ a:hover {
 .trail-card {
   background-color: #f4f4f4;
   box-shadow: 2px 2px 5px #999;
-  padding: 15px;
+  padding: 12px;
   margin: 12px;
   width: 160px;
   height: 220px;
@@ -98,41 +98,43 @@ a:hover {
   width: 74%;
 }
 
-/* @media (max-width: 780px) {
-  .masthead {
-    font-size: 15em ;
-  }
-} */
+/* create new trail form */
 
-
-/* create new blog form */
-/* .create {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
-.create label {
+.trail-card label {
+  font-size: 0.9em;
   text-align: left;
   display: block;
 }
-.create h2 {
-  font-size: 20px;
-  color: #f1356d;
+.trail-card img {
+  align-items: center;
+  font-size: 0.8em;
   margin-bottom: 30px;
 }
-.create input, .create textarea, .create select {
+.trail-card input, .trail-card textarea, .trail-card select {
+  font-size: 0.7em;
   width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
+  padding: 4px 8px;
+  margin: auto;
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
 }
-.create button {
-  background: #f1356d;
-  color: #fff;
+
+.trail-card :placeholder-shown {
+  color: #ddd;
+  font-style: italic;
+  font-size: 0.65em;
+}
+
+.trail-card button {
+  font-size: 0.55em;
+  background: rgb(104, 8, 21);
+  color: white;
+  align-items: center;
+  margin-top: 12px;
+  border: 1px solid #ddd;
   border: 0;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 4px 8px;
+  /* border-radius: 4px; */
   cursor: pointer;
-} */
+}
