@@ -13,6 +13,13 @@ const TrailJournal = () => {
         <TrailCard />
         <TrailCard />
         <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
+        <TrailCard />
       </div>
     </>
   )
