@@ -8,7 +8,8 @@ import TrailJournal from './TrailJournal'
 import WishList from './WishList'
 import BikeCheck from './BikeCheck'
 import MySetup from './MySetup'
-import TrailView from './TrailFull'
+import TrailFullView from './TrailFullView'
+import CreateTrail from './CreateTrail'
 
 const App = () => {
   // const [greeting, setGreeting] = useState('')
@@ -35,7 +36,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trailjournal" element={<TrailJournal />} />
-          <Route path="/trailjournal/:name" element={<TrailView />} />
+          <Route path="/create-trail/:id" element={<CreateTrail />} />
+          <Route path="/trailjournal/:name" element={<TrailFullView />} />
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/bike-check" element={<BikeCheck />} />
           <Route path="/my-setup" element={<MySetup />} />

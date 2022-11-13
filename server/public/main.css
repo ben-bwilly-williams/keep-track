@@ -5,17 +5,18 @@
 
 .dirt-pic {
   position: fixed;
-  right: 13%;
+  right: 14%;
   height: 100%;
   width: 100%;
   object-fit: cover;
   z-index: -1;
+  transform: rotateY(180deg);
 }
 
 .masthead-wrap {
   position: absolute;
-  bottom: 125px;
-  left: 80px;
+  bottom: 140px;
+  left: 85px;
   /* margin-left: 15px; */
 }
 
@@ -44,7 +45,7 @@
   padding-top: 100px;
   right: 0;
   height: 100%;
-  width: 13%;
+  width: 14%;
   background-color: rgb(104, 8, 21);
 }
 
@@ -79,7 +80,66 @@ a:hover {
   cursor: pointer;
 }
 
-.trail-card {
+/* create new trail form */
+
+.create-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+  width: 74%;
+}
+
+.create-trail {
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px #999;
+  padding: 20px;
+  margin: 12px;
+  width: 500px;
+  height: 740px;
+  list-style: none;
+}
+
+.create-trail img {
+  align-items: center;
+  font-size: 1.4em;
+  margin-bottom: 60px;
+}
+
+.create-trail input, .create-trail textarea, .create-trail select {
+  font-size: 1em;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 24px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create-trail :placeholder-shown {
+  color: #ddd;
+  font-style: italic;
+  font-size: 1em;
+}
+
+.create-trail button {
+  font-size: 1.1em;
+  background: rgb(104, 8, 21);
+  color: white;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* DISPLAY TRAILS */
+
+.display-trail {
   background-color: #f4f4f4;
   box-shadow: 2px 2px 5px #999;
   padding: 12px;
@@ -98,43 +158,55 @@ a:hover {
   width: 74%;
 }
 
-/* create new trail form */
-
-.trail-card label {
-  font-size: 0.9em;
-  text-align: left;
-  display: block;
-}
-.trail-card img {
+.display-trail img {
   align-items: center;
   font-size: 0.8em;
   margin-bottom: 30px;
 }
-.trail-card input, .trail-card textarea, .trail-card select {
-  font-size: 0.7em;
+
+.display-trail h4 {
+  font-size: 1em;
+  font-weight: 500;
+  color: black;
   width: 100%;
-  padding: 4px 8px;
-  margin: auto;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
+  padding: 6px 0 0 8px;
 }
 
-.trail-card :placeholder-shown {
-  color: #ddd;
-  font-style: italic;
-  font-size: 0.65em;
-}
-
-.trail-card button {
-  font-size: 0.55em;
-  background: rgb(104, 8, 21);
-  color: white;
-  align-items: center;
-  margin-top: 12px;
-  border: 1px solid #ddd;
+.new-trail-button {
+  font-size: 1.1em;
+  color: #999;
+  width: 184px;
+  height: 245px;
+  margin: 12px;
+  /* padding: 12px; */
   border: 0;
-  padding: 4px 8px;
-  /* border-radius: 4px; */
-  cursor: pointer;
+}
+
+.plus {
+  margin-top: -20px;
+  font-size: 6em;
+  font-weight: 400;
+  color: #999;
+}
+
+/* FULL TRAIL VIEW */
+
+.full-view-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+  width: 74%;
+}
+
+.full-view-trail {
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px #999;
+  padding: 20px;
+  margin: 12px;
+  width: 500px;
+  height: 740px;
+  list-style: none;
 }
