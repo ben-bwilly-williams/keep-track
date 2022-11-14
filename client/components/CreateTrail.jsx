@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { addTrail } from '../actions'
 
 // usParams link to trail name or id
@@ -22,7 +22,7 @@ const CreateTrail = () => {
 
   return (
     <>
-      <div className="create-container">
+      <div className="fullview-container">
         {/* <Link to={'/trailjournal/:name'}> */}
         <div className="create-trail">
           <img src="" alt="Grade icon" />

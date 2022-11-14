@@ -17,7 +17,6 @@
   position: absolute;
   bottom: 140px;
   left: 85px;
-  /* margin-left: 15px; */
 }
 
 .masthead {
@@ -82,7 +81,7 @@ a:hover {
 
 /* create new trail form */
 
-.create-container {
+.fullview-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -191,22 +190,43 @@ a:hover {
 
 /* FULL TRAIL VIEW */
 
-.full-view-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 100px;
-  width: 74%;
-}
-
-.full-view-trail {
-  text-align: center;
+.fullview-trail {
+  text-align: left;
   background-color: #f4f4f4;
   box-shadow: 2px 2px 5px #999;
-  padding: 20px;
+  padding: 60px;
   margin: 12px;
   width: 500px;
   height: 740px;
   list-style: none;
+}
+
+.fullview-trail h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.fullview-trail h3 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.fullview-trail h5 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.fullview-trail p {
+  font-size: 1em;
+  line-height: 160%;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.fullview-trail hr {
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
