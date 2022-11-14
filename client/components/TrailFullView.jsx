@@ -9,10 +9,22 @@ const TrailFullView = () => {
 
   return (
     <>
-      <div className="full-view-container">
-        <div className="full-view-trail">
+      <div className="fullview-container">
+        <div className="fullview-trail">
           <img src="" alt="Grade icon" />
-          <h2>Trail</h2>
+          <h2>Rude Rock</h2>
+          <h3>Coronet Peak, Queenstown</h3>
+          <hr />
+          <h5>Description</h5>
+          <p>
+            Long, flowy, extremely fast descent perfectly built berms dug into
+            the hill. Occasional rock features and jumps but generally pretty
+            straight-forward.
+          </p>
+          <h5>Condition/notes</h5>
+          <p>Some ruts and damage from spring snow.</p>
+          <h5>Date ridden</h5>
+          <p className="date">28/12/21</p>
         </div>
       </div>
     </>

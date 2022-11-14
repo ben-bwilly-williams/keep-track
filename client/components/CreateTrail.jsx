@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addTrail } from '../actions'
 
 // usParams link to trail name or id
 
@@ -7,16 +9,20 @@ const CreateTrail = () => {
   const [location, setLocation] = useState('')
   const [description, setDescription] = useState('')
   const [notes, setNotes] = useState('')
+  const [date, setDate] = useState('')
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newTrail = { name, location, description, notes }
+    const newTrail = { name, location, description, notes, date }
+    dispatch(addTrail(newTrail))
+
     console.log(newTrail)
   }
 
   return (
     <>
-      <div className="create-container">
+      <div className="fullview-container">
         {/* <Link to={'/trailjournal/:name'}> */}
         <div className="create-trail">
           <img src="" alt="Grade icon" />
@@ -46,7 +52,12 @@ const CreateTrail = () => {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
             />
-            <input placeholder="Rating" type="text" required />
+            <input
+              placeholder="Date"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
             <button>Add to trails</button>
           </form>
         </div>
