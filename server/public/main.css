@@ -21,7 +21,7 @@
 }
 
 .masthead {
-  font-size: 15vw ;
+  font-size: 16vw ;
   line-height: 0.8em;
   letter-spacing: -0.7rem;
   color: rgb(255, 255, 255);
@@ -30,8 +30,8 @@
 .subhead {
   font-family: 'Albert Sans', sans-serif;
   font-weight: 500; 
-  font-size: 1.5vw ;
-  letter-spacing: 0rem;
+  font-size: 1.6vw ;
+  letter-spacing: 0.04rem;
   color: rgb(255, 255, 255);
   margin-top: 30px;
   padding-left: 15px;
