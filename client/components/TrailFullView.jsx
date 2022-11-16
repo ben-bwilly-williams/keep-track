@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useParams } from 'react'
 import { deleteTrail } from '../actions'
 import { useDispatch } from 'react-redux'
+import trailsDb from '../../server/db/trailsDb'
+
 // import { Link } from 'react-router-dom'
 
 const TrailFullView = () => {
   // const { name } = useParams()
+  const trail = trailsDb
   const dispatch = useDispatch()
 
   function handleDelete(e, toDelete) {
@@ -24,22 +27,15 @@ const TrailFullView = () => {
             src="/images/grade-4.png"
             alt="Grade icon"
           />
-          <h2>Rude Rock</h2>
-          <h3>Coronet Peak, Queenstown</h3>
+          <h2>{trail.trailName}</h2>
+          <h3>{trail.location}</h3>
           <hr />
           <h5>Description</h5>
-          <p>
-            Long, flowy, extremely fast descent perfectly built berms dug into
-            the hill. Occasional rock features and jumps but generally pretty
-            straight-forward.
-          </p>
+          <p>{trail.description}</p>
           <h5>Condition/notes</h5>
-          <p>
-            Some ruts and damage from spring snow. Bike felt great with firmer
-            suspension and fast tyres.
-          </p>
+          <p>{trail.notes}</p>
           <h5>Date ridden</h5>
-          <p className="date">28/12/21</p>
+          <p className="date">{trail.date}</p>
           {/* <button>Remove</button> */}
           <button onClick={(e) => handleDelete(e)}>
             <span className="material-symbols-outlined">delete</span>
