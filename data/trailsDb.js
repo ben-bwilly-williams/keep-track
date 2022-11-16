@@ -1,9 +1,9 @@
 const config = require('./knexfile').development
 const connection = require('knex')(config)
 
-function addTrail(trail, db = connection) {
-  const newTrail = { trail }
-  return db('todos').insert(newTrail)
+function addTrail(newTrail, db = connection) {
+  console.log(newTrail)
+  return db('trails').insert(newTrail)
 }
 
 function close(db = connection) {

@@ -16,6 +16,7 @@
     "server": "node server",
     "test": "jest",
     "test:watch": "jest --watchAll",
+    "knex": "knex --knexfile server/knexfile.js",
     "webpack": "webpack --config ./client/webpack.config.js",
     "lint": "eslint --ext .js,.jsx ."
   },

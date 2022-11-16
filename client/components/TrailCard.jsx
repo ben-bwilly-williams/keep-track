@@ -8,8 +8,13 @@ const TrailCards = () => {
     <>
       <div>
         <Link to={'/trailjournal/:name'}>
-          <div className="display-trail">
-            <h4 className="trail-preview">Icon</h4>
+          <div className="preview-trail">
+            <img
+              className="grade-image-small"
+              src="/images/grade-5.png"
+              alt="Grade icon"
+            />
+            {/* <h4 className="trail-preview">Icon</h4> */}
             <h4 className="trail-preview">Name</h4>
             <h4 className="trail-preview">Location</h4>
           </div>

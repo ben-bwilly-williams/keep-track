@@ -4,3 +4,10 @@ export function addTrail(newTrail) {
     payload: newTrail,
   }
 }
+
+export function deleteTrail(deleteTrail) {
+  return {
+    type: 'DEL_TRAIL',
+    payload: deleteTrail,
+  }
+}

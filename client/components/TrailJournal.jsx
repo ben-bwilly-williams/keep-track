@@ -18,6 +18,9 @@ const TrailJournal = () => {
             <h1 className="plus">+</h1>Add a trail
           </button>
         </Link>
+
+        {/* MAP TRAILS DATA TO PLACE CARDS */}
+
         <TrailCard />
         <TrailCard />
         <TrailCard />

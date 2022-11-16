@@ -8,8 +8,8 @@ exports.up = function (knex) {
     table.string('gradeIcon')
     table.string('trailName')
     table.string('location')
-    table.text('description')
-    table.text('notes')
+    table.string('description')
+    table.string('notes')
     table.date('date')
   })
 }

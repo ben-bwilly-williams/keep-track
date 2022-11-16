@@ -22,7 +22,7 @@
 .masthead {
   font-size: 16vw ;
   line-height: 0.8em;
-  letter-spacing: -0.7rem;
+  letter-spacing: -0.6rem;
   color: rgb(255, 255, 255);
 }
 
@@ -79,6 +79,8 @@ a:hover {
   cursor: pointer;
 }
 
+
+
 /* create new trail form */
 
 .fullview-container {
@@ -96,8 +98,8 @@ a:hover {
   box-shadow: 2px 2px 5px #999;
   padding: 20px;
   margin: 12px;
-  width: 500px;
-  height: 740px;
+  width: 540px;
+  height: 760px;
   list-style: none;
 }
 
@@ -138,13 +140,13 @@ a:hover {
 
 /* DISPLAY TRAILS */
 
-.display-trail {
+.preview-trail {
   background-color: #f4f4f4;
   box-shadow: 2px 2px 5px #999;
-  padding: 12px;
+  padding: 22px;
   margin: 12px;
-  width: 160px;
-  height: 220px;
+  width: 140px;
+  height: 200px;
   list-style: none;
 }
 
@@ -152,23 +154,25 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:flex-start;
+  justify-content: flex-start;
   margin: 100px;
   width: 74%;
 }
 
-.display-trail img {
+.preview-trail img {
   align-items: center;
   font-size: 0.8em;
   margin-bottom: 30px;
 }
 
-.display-trail h4 {
-  font-size: 1em;
-  font-weight: 500;
+.preview-trail h4 {
+  font-size: 0.95em;
+  font-weight: 300;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
   color: black;
   width: 100%;
-  padding: 6px 0 0 8px;
+  padding: 6px 0 0 ;
 }
 
 .new-trail-button {
@@ -190,43 +194,61 @@ a:hover {
 
 /* FULL TRAIL VIEW */
 
-.fullview-trail {
+.full-trail {
   text-align: left;
   background-color: #f4f4f4;
   box-shadow: 2px 2px 5px #999;
   padding: 60px;
   margin: 12px;
-  width: 500px;
-  height: 740px;
+  width: 460px;
+  height: 680px;
   list-style: none;
+  overflow: hidden; << fix
 }
 
-.fullview-trail h2 {
+.full-trail h2 {
   font-size: 2em;
   margin-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-.fullview-trail h3 {
+.full-trail h3 {
   font-size: 1.2em;
   font-weight: 400;
   margin-bottom: 30px;
 }
 
-.fullview-trail h5 {
+.full-trail h5 {
   font-size: 1em;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
-.fullview-trail p {
+.full-trail p {
   font-size: 1em;
   line-height: 160%;
   font-weight: 300;
   margin-bottom: 25px;
 }
 
-.fullview-trail hr {
+.full-trail hr {
   margin-top: 40px;
   margin-bottom: 30px;
+}
+
+.full-trail button {
+  margin: 40px 0 0 0;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.grade-image {
+  width: 80px;
+  height: auto
+}
+
+.grade-image-small {
+  height: 45px;
+  width: auto
 }
