@@ -1,4 +1,5 @@
-import { getTrails } from '../apiClient'
+import request from 'superagent'
+import { getTrails, addNewTrail } from '../apiClient'
 
 export function addTrail(newTrail) {
   return {
@@ -30,4 +31,25 @@ export function fetchTrails() {
       })
       .catch((err) => console.error(err.message))
   }
+}
+
+// export function createTrail(newTrail) {
+//   return (dispatch) => {
+//     return addNewTrail(newTrail)
+//       .then((newTrail) => {
+//         dispatch(addTrail(newTrail))
+//         return null
+//       })
+//       .catch((err) => console.error(err.message))
+//   }
+// }
+
+export function createTrail(newTrail) {
+  return request
+    .post('/trails')
+    .send(newTrail)
+    .then((res) => {
+      return res.body
+    })
+    .catch((err) => console.error(err.message))
 }

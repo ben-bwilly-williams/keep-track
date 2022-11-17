@@ -5,3 +5,12 @@ export function getTrails() {
     return showTrails.body
   })
 }
+
+export function addNewTrail(trail) {
+  return request
+    .post('/trails')
+    .send({ trail })
+    .then((addTrail) => {
+      return addTrail.body
+    })
+}

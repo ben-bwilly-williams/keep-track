@@ -6,7 +6,6 @@ function getTrails(db = connection) {
 }
 
 function addTrail(newTrail, db = connection) {
-  console.log(newTrail)
   return db('trails').insert(newTrail)
 }
 

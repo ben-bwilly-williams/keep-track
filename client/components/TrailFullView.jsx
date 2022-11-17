@@ -4,15 +4,11 @@ import { useParams } from 'react-router-dom'
 
 import { fetchTrails } from '../actions'
 
-// usParams link to trail name or id
-
 const TrailFullView = () => {
   const { id } = useParams()
-  console.log(id)
 
   const trails = useSelector((state) => state.trails)
   const dispatch = useDispatch()
-  console.log(trails)
 
   useEffect(() => {
     dispatch(fetchTrails())
@@ -24,7 +20,6 @@ const TrailFullView = () => {
   }
 
   const currentTrail = trails.find((trail) => trail.id == id)
-  // console.log(currentTrail)
 
   return (
     <>

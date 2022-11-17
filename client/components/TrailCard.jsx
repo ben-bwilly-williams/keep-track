@@ -17,19 +17,18 @@ const TrailCards = () => {
       <div>
         {trails.map((trail, index) => {
           return (
-            <>
-              <Link to={`/trailjournal/${trail.id}`}>
-                <div className="preview-trail">
-                  <img
-                    src={`/images/${trail.gradeIcon}`}
-                    alt="Difficulty grade"
-                  />
-                  <hr />
-                  <h4 key={index}>{trail.trailName}</h4>
-                  <h5 key={index}>{trail.location}</h5>
-                </div>
-              </Link>
-            </>
+            <Link to={`/trailjournal/${trail.id}`} key={index}>
+              <div className="preview-trail">
+                <img
+                  // key={index}
+                  src={`/images/${trail.gradeIcon}`}
+                  alt="Difficulty grade"
+                />
+                <hr />
+                <h4>{trail.trailName}</h4>
+                <h5>{trail.location}</h5>
+              </div>
+            </Link>
           )
         })}
       </div>

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addTrail } from '../actions'
-
-// usParams link to trail name or id
+import { addTrail, createTrail } from '../actions'
+// import {createTrail} from '../actions/index'
 
 const CreateTrail = () => {
   const [name, setName] = useState('')
@@ -16,6 +15,7 @@ const CreateTrail = () => {
     e.preventDefault()
     const newTrail = { name, location, description, notes, date }
     dispatch(addTrail(newTrail))
+    createTrail(newTrail)
 
     console.log(newTrail)
   }
