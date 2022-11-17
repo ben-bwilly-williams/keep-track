@@ -1,41 +1,45 @@
-import React, { useState, useEffect, useParams } from 'react'
-import { deleteTrail } from '../actions'
-import { useDispatch } from 'react-redux'
-// import trailsDb from '../../server/db/trailsDb'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+
+import { fetchTrails } from '../actions'
+
+// usParams link to trail name or id
 
 const TrailFullView = () => {
-  // const { name } = useParams()
-  // const trail = trailsDb
-  // console.log(trail)
+  const { id } = useParams()
+  console.log(id)
+
+  const trails = useSelector((state) => state.trails)
   const dispatch = useDispatch()
+  console.log(trails)
+
+  useEffect(() => {
+    dispatch(fetchTrails())
+  }, [])
 
   function handleDelete(e, toDelete) {
     dispatch(deleteTrail(toDelete))
     e.preventDefault()
   }
 
-  // const trail = trailsDataNonexistent.find((trail) => trail.name == name)
-  // console.log(trail)
+  const currentTrail = trails.find((trail) => trail.id == id)
+  // console.log(currentTrail)
 
   return (
     <>
       <div className="fullview-container">
         <div className="full-trail">
-          <img
-            className="grade-image"
-            src="/images/grade-4.png"
-            alt="Grade icon"
-          />
-          {/* <h2>{trail.trailName}</h2>
-          <h3>{trail.location}</h3>
+          <img src={`/images/${currentTrail.gradeIcon}`} alt="Grade icon" />
+          <h2>{currentTrail.trailName}</h2>
+          <h3>{currentTrail.location}</h3>
           <hr />
           <h5>Description</h5>
-          <p>{trail.description}</p>
+          <p>{currentTrail.description}</p>
           <h5>Condition/notes</h5>
-          <p>{trail.notes}</p>
+          <p>{currentTrail.notes}</p>
           <h5>Date ridden</h5>
-          <p className="date">{trail.date}</p> */}
-          {/* <button>Remove</button> */}
+          <p>{currentTrail.date}</p>
           <button onClick={(e) => handleDelete(e)}>
             <span className="material-symbols-outlined">delete</span>
           </button>
