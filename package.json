@@ -16,7 +16,7 @@
     "server": "node server",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "knex": "knex --knexfile server/knexfile.js",
+    "knex": "knex --knexfile server/db/knexfile.js",
     "webpack": "webpack --config ./client/webpack.config.js",
     "lint": "eslint --ext .js,.jsx ."
   },
@@ -43,6 +43,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
     "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
     "sqlite3": "^5.1.2"
   },
   "devDependencies": {

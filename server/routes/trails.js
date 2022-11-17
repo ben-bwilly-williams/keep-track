@@ -13,3 +13,12 @@ router.get('/', (req, res) => {
     })
     .catch(console.error)
 })
+
+router.post('/', (req, res) => {
+  const newTrail = req.body
+  db.addTrail(newTrail)
+    .then(() => {
+      res.sendStatus(200)
+    })
+    .catch(console.error)
+})

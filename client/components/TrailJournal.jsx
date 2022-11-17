@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
 import TrailCard from './TrailCard'
+import { fetchTrails } from '../actions'
 
 // delete entry
 // update entry
@@ -10,6 +12,14 @@ import TrailCard from './TrailCard'
 // link to Trailforks API
 
 const TrailJournal = () => {
+  const trails = useSelector((state) => state.trails)
+  const dispatch = useDispatch()
+  console.log(trails)
+
+  useEffect(() => {
+    dispatch(fetchTrails())
+  }, [])
+
   return (
     <>
       <div className="card-container">

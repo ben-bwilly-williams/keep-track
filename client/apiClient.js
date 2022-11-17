@@ -1,5 +1,7 @@
 import request from 'superagent'
 
-export function getGreeting() {
-  return request.get('/greeting').then((res) => res.body.greeting)
+export function getTrails() {
+  return request.get('/trails').then((showTrails) => {
+    return showTrails.body
+  })
 }

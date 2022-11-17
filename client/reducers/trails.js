@@ -7,6 +7,8 @@ const trailReducer = (state = initialTrailState, action) => {
       return [...state, payload]
     case 'DEL_TRAIL':
       return state.filter((trail) => trail !== payload)
+    case 'SHOW_TRAILS':
+      return payload
     // case 'UPDATE_TRAIL':
     //   return state.map((trail) =>
     //     trail === payload.current ? payload.update : trail
