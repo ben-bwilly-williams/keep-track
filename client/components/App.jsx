@@ -19,8 +19,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trailjournal" element={<TrailJournal />} />
-          <Route path="/create-trail/:id" element={<CreateTrail />} />
-          <Route path="/trailjournal/:name" element={<TrailFullView />} />
+          <Route path="/create-trail/" element={<CreateTrail />} />
+          <Route path="/trailjournal/:id" element={<TrailFullView />} />
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/bike-check" element={<BikeCheck />} />
           <Route path="/my-setup" element={<MySetup />} />

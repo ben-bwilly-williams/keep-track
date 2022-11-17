@@ -83,6 +83,15 @@ a:hover {
 
 /* create new trail form */
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 100px;
+  width: 74%;
+}
+
 .fullview-container {
   display: flex;
   flex-direction: row;
@@ -141,6 +150,7 @@ a:hover {
 /* DISPLAY TRAILS */
 
 .preview-trail {
+  display: inline-block;
   background-color: #f4f4f4;
   box-shadow: 2px 2px 5px #999;
   padding: 22px;
@@ -150,29 +160,35 @@ a:hover {
   list-style: none;
 }
 
-.card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 100px;
-  width: 74%;
-}
-
 .preview-trail img {
   align-items: center;
   font-size: 0.8em;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  height: 42px;
+  width: auto
+}
+
+.preview-trail hr {
+  margin-bottom: 16px;
+  border: none;
+  height: 1.1px;
+  background-color: black;
 }
 
 .preview-trail h4 {
-  font-size: 0.95em;
-  font-weight: 300;
-  line-height: 1.2em;
+  font-size: 0.97em;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: black;
   width: 100%;
-  padding: 6px 0 0 ;
+}
+.preview-trail h5 {
+  font-size: 0.97em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: black;
+  width: 100%;
+  padding: 8px 0 0 ;
 }
 
 .new-trail-button {
@@ -181,7 +197,6 @@ a:hover {
   width: 184px;
   height: 245px;
   margin: 12px;
-  /* padding: 12px; */
   border: 0;
 }
 
@@ -234,6 +249,9 @@ a:hover {
 .full-trail hr {
   margin-top: 40px;
   margin-bottom: 30px;
+  border: none;
+  height: 1.1px;
+  background-color: black;
 }
 
 .full-trail button {
@@ -243,12 +261,7 @@ a:hover {
   padding: 0;
 }
 
-.grade-image {
+.full-trail img {
   width: 80px;
   height: auto
-}
-
-.grade-image-small {
-  height: 45px;
-  width: auto
 }
