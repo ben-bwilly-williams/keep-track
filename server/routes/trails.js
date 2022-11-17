@@ -17,7 +17,8 @@ router.post('/', (req, res) => {
   const newTrail = req.body
   console.log(newTrail)
   db.addTrail(newTrail)
-    .then(() => {
+    .then((trail) => {
+      res.send(trail)
       res.sendStatus(200)
     })
     .catch(console.error)
