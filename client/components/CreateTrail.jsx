@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTrail, createTrail } from '../actions'
+import { useNavigate } from 'react-router-dom'
+
 // import {createTrail} from '../actions/index'
 
 const CreateTrail = () => {
-  const [name, setName] = useState('')
+  const [trailName, setTrailName] = useState('')
   const [location, setLocation] = useState('')
   const [description, setDescription] = useState('')
   const [notes, setNotes] = useState('')
   const [date, setDate] = useState('')
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newTrail = { name, location, description, notes, date }
+    const newTrail = { trailName, location, description, notes, date }
     dispatch(addTrail(newTrail))
-    createTrail(newTrail)
-
-    console.log(newTrail)
+    // createTrail(newTrail)
+    navigate('/trailjournal')
   }
 
   return (
@@ -31,8 +33,8 @@ const CreateTrail = () => {
               placeholder="Trail name"
               type="text"
               required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={trailName}
+              onChange={(e) => setTrailName(e.target.value)}
             />
             <input
               placeholder="Location"

@@ -14,12 +14,12 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const newTrail = req.body
-  console.log(newTrail)
-  db.addTrail(newTrail)
-    .then((trail) => {
-      res.send(trail)
-      res.sendStatus(200)
+  db.addTrail(req.body)
+    .then(() => {
+      return db.getTrails()
     })
-    .catch(console.error)
+    .then((trails) => {
+      res.json(trails)
+    })
+    .catch((err) => console.error(err.message))
 })

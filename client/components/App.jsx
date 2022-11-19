@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react'
-// import { getGreeting } from '../apiClient'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
+
+import { fetchTrails } from '../actions'
 
 import Nav from './Nav'
 import Home from './Home'
@@ -12,6 +14,12 @@ import TrailFullView from './TrailFullView'
 import CreateTrail from './CreateTrail'
 
 const App = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchTrails())
+  }, [])
+
   return (
     <>
       <Router>

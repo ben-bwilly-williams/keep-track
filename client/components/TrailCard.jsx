@@ -1,23 +1,18 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { fetchTrails } from '../actions'
-
-const TrailCards = () => {
+const TrailCard = () => {
   const trails = useSelector((state) => state.trails)
-  const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(fetchTrails())
-  }, [])
-
-  return (
+  return !trails ? (
+    <div></div>
+  ) : (
     <>
       <div>
-        {trails.map((trail, index) => {
+        {trails.map((trail) => {
           return (
-            <Link to={`/trailjournal/${trail.id}`} key={index}>
+            <Link to={`/trailjournal/${trail.id}`} key={trail.id}>
               <div className="preview-trail">
                 <img
                   // key={index}
@@ -36,4 +31,4 @@ const TrailCards = () => {
   )
 }
 
-export default TrailCards
+export default TrailCard
