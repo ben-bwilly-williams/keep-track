@@ -13,9 +13,9 @@ import MySetup from './MySetup'
 import TrailFullView from './TrailFullView'
 import CreateTrail from './CreateTrail'
 
-// delete entry
 // update entry
 // search/filter by region, grade
+// previous/next in full view .. use index as id could be missing?
 // location radius
 // link to Trailforks API
 
