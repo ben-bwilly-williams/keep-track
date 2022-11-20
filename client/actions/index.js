@@ -7,12 +7,13 @@ export function showTrails(trails) {
   }
 }
 
-export function deleteTrail(deleteTrail) {
-  return {
-    type: 'DEL_TRAIL',
-    payload: deleteTrail,
-  }
-}
+// export function deleteTrail(trailId) {
+//   console.log(trailId)
+//   return {
+//     type: 'DEL_TRAIL',
+//     payload: trailId,
+//   }
+// }
 
 export function fetchTrails() {
   return (dispatch) => {
@@ -25,9 +26,9 @@ export function fetchTrails() {
   }
 }
 
-export function createTrail(newSubmission) {
+export function createTrail(newTrail) {
   return (dispatch) => {
-    return addNewTrail(newSubmission)
+    return addNewTrail(newTrail)
       .then((res) => {
         dispatch(showTrails(res))
       })
@@ -39,7 +40,7 @@ export function removeTrail(trailId) {
   return (dispatch) => {
     return removeCurrentTrail(trailId)
       .then((res) => {
-        dispatch(showTrails(res))
+        dispatch(fetchTrails(res))
       })
       .catch((err) => console.error(err.message))
   }

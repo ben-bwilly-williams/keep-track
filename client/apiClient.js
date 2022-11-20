@@ -15,6 +15,6 @@ export function addNewTrail(newTrail) {
     })
 }
 
-export function removeCurrentTrail(trailId) {
-  return request.delete(`/api/v1/trails/${trailId}`)
+export function removeCurrentTrail(id) {
+  return request.del(`/api/v1/trails/${id}`)
 }
