@@ -7,9 +7,9 @@ const TrailCard = () => {
 
   return (
     <>
-      {trails.map((trail) => {
+      {trails.map((trail, index) => {
         return (
-          <Link to={`/trailjournal/${trail.id}`} key={trail.id}>
+          <Link to={`/trailjournal/${trail.id}`} key={index}>
             <div className="preview-trail">
               <img src={`/images/${trail.gradeIcon}`} alt="Difficulty grade" />
               <hr />

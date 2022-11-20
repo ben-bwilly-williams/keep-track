@@ -44,7 +44,7 @@ const CreateTrail = () => {
               <option defaultValue hidden value="gradeIcon">
                 Difficulty
               </option>
-              <option value="grade-2.png">2 – Easy</option>
+              <option value="grade-2.png">2 – Beginner</option>
               <option value="grade-3.png">3 – Intermediate</option>
               <option value="grade-4.png">4 – Advanced</option>
               <option value="grade-5.png">5 – Expert</option>
