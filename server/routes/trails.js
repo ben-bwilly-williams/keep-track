@@ -10,16 +10,27 @@ router.get('/', (req, res) => {
     .then((trails) => {
       res.json(trails)
     })
-    .catch(console.error)
+    .catch((err) => console.error(err.message))
 })
 
 router.post('/', (req, res) => {
-  const newTrail = req.body
-  console.log(newTrail)
-  db.addTrail(newTrail)
-    .then((trail) => {
-      res.send(trail)
-      res.sendStatus(200)
+  db.addTrail(req.body)
+    .then(() => {
+      return db.getTrails()
+    })
+    .then((trails) => {
+      res.json(trails)
+    })
+    .catch((err) => console.error(err.message))
+})
+
+router.delete('/:id', (req, res) => {
+  db.deleteTrail(req.params.id)
+    .then((trails) => {
+      return db.getTrails(trails)
+    })
+    .then((trails) => {
+      res.json(trails)
     })
     .catch(console.error)
 })

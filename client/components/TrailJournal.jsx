@@ -18,7 +18,6 @@ const TrailJournal = () => {
             <h1 className="plus">+</h1>Add a trail
           </button>
         </Link>
-
         <TrailCard />
       </div>
     </>

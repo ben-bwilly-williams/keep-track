@@ -1,27 +1,28 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
 
-import { fetchTrails } from '../actions'
+import { useParams, useNavigate } from 'react-router-dom'
+
+import { deleteTrail } from '../actions'
 
 const TrailFullView = () => {
   const { id } = useParams()
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const trails = useSelector((state) => state.trails)
-  const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(fetchTrails())
-  }, [])
-
-  function handleDelete(e, toDelete) {
-    dispatch(deleteTrail(toDelete))
+  function handleDelete(e, trailId) {
+    dispatch(deleteTrail(Number(trailId)))
     e.preventDefault()
+    navigate('/trailjournal')
   }
 
   const currentTrail = trails.find((trail) => trail.id == id)
 
-  return (
+  return !currentTrail ? (
+    <div></div>
+  ) : (
     <>
       <div className="fullview-container">
         <div className="full-trail">

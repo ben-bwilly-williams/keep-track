@@ -1,10 +1,9 @@
-import request from 'superagent'
-import { getTrails, addNewTrail } from '../apiClient'
+import { getTrails, addNewTrail, removeCurrentTrail } from '../apiClient'
 
-export function addTrail(newTrail) {
+export function showTrails(trails) {
   return {
-    type: 'ADD_TRAIL',
-    payload: newTrail,
+    type: 'SHOW_TRAILS',
+    payload: trails,
   }
 }
 
@@ -12,13 +11,6 @@ export function deleteTrail(deleteTrail) {
   return {
     type: 'DEL_TRAIL',
     payload: deleteTrail,
-  }
-}
-
-export function showTrails(trails) {
-  return {
-    type: 'SHOW_TRAILS',
-    payload: trails,
   }
 }
 
@@ -33,23 +25,22 @@ export function fetchTrails() {
   }
 }
 
-// export function createTrail(newTrail) {
-//   return (dispatch) => {
-//     return addNewTrail(newTrail)
-//       .then((newTrail) => {
-//         dispatch(addTrail(newTrail))
-//         return null
-//       })
-//       .catch((err) => console.error(err.message))
-//   }
-// }
+export function createTrail(newSubmission) {
+  return (dispatch) => {
+    return addNewTrail(newSubmission)
+      .then((res) => {
+        dispatch(showTrails(res))
+      })
+      .catch((err) => console.error(err.message))
+  }
+}
 
-export function createTrail(newTrail) {
-  return request
-    .post('/trails')
-    .send(newTrail)
-    .then((res) => {
-      return res.body
-    })
-    .catch((err) => console.error(err.message))
+export function removeTrail(trailId) {
+  return (dispatch) => {
+    return removeCurrentTrail(trailId)
+      .then((res) => {
+        dispatch(showTrails(res))
+      })
+      .catch((err) => console.error(err.message))
+  }
 }
