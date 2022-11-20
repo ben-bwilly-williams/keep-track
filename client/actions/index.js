@@ -7,10 +7,11 @@ export function showTrails(trails) {
   }
 }
 
-export function deleteTrail(deleteTrail) {
+export function deleteTrail(trailId) {
+  console.log(trailId)
   return {
     type: 'DEL_TRAIL',
-    payload: deleteTrail,
+    payload: trailId,
   }
 }
 
@@ -39,7 +40,7 @@ export function removeTrail(trailId) {
   return (dispatch) => {
     return removeCurrentTrail(trailId)
       .then((res) => {
-        dispatch(showTrails(res))
+        dispatch(fetchTrails(res))
       })
       .catch((err) => console.error(err.message))
   }

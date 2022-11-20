@@ -16,5 +16,5 @@ export function addNewTrail(newTrail) {
 }
 
 export function removeCurrentTrail(id) {
-  return request.del(`/api/v1/trails/${id}`).then((res) => res)
+  return request.del(`/api/v1/trails/${id}`)
 }
