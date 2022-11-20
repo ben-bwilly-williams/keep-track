@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addTrail, createTrail } from '../actions'
+import { createTrail } from '../actions'
 import { useNavigate } from 'react-router-dom'
 
 // import {createTrail} from '../actions/index'
 
 const CreateTrail = () => {
+  const [gradeIcon, setGradeIcon] = useState('')
   const [trailName, setTrailName] = useState('')
   const [location, setLocation] = useState('')
   const [description, setDescription] = useState('')
@@ -16,9 +17,15 @@ const CreateTrail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newTrail = { trailName, location, description, notes, date }
-    dispatch(addTrail(newTrail))
-    // createTrail(newTrail)
+    const newTrail = {
+      gradeIcon,
+      trailName,
+      location,
+      description,
+      notes,
+      date,
+    }
+    dispatch(createTrail(newTrail))
     navigate('/trailjournal')
   }
 
@@ -27,8 +34,23 @@ const CreateTrail = () => {
       <div className="fullview-container">
         {/* <Link to={'/trailjournal/:name'}> */}
         <div className="create-trail">
-          <img src="" alt="Grade icon" />
           <form onSubmit={handleSubmit}>
+            <h2>New entry</h2>
+            <select
+              value={gradeIcon}
+              onChange={(event) => setGradeIcon(event.target.value)}
+              type="text"
+              required
+            >
+              <option defaultValue hidden value="gradeIcon">
+                Difficulty
+              </option>
+              <option value="grade-2.png">2 – Easy</option>
+              <option value="grade-3.png">3 – Intermediate</option>
+              <option value="grade-4.png">4 – Advanced</option>
+              <option value="grade-5.png">5 – Expert</option>
+              <option value="grade-6.png">6 – Extreme</option>
+            </select>
             <input
               placeholder="Trail name"
               type="text"
@@ -55,7 +77,7 @@ const CreateTrail = () => {
               onChange={(e) => setNotes(e.target.value)}
             />
             <input
-              placeholder="Date"
+              placeholder="Date ridden"
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}

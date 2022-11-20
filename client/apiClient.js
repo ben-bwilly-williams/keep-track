@@ -6,8 +6,6 @@ export function getTrails() {
   })
 }
 
-// ABOVE IS WHAT WORKED BEFORE *******
-
 export function addNewTrail(newTrail) {
   return request
     .post('/api/v1/trails')
@@ -17,6 +15,6 @@ export function addNewTrail(newTrail) {
     })
 }
 
-// export function removeTrailById() {
-//   return request.delete('/trailjournal/:id')
-// }
+export function removeCurrentTrail(trailId) {
+  return request.delete(`/api/v1/trails/${trailId}`)
+}
