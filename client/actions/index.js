@@ -7,13 +7,13 @@ export function showTrails(trails) {
   }
 }
 
-export function deleteTrail(trailId) {
-  console.log(trailId)
-  return {
-    type: 'DEL_TRAIL',
-    payload: trailId,
-  }
-}
+// export function deleteTrail(trailId) {
+//   console.log(trailId)
+//   return {
+//     type: 'DEL_TRAIL',
+//     payload: trailId,
+//   }
+// }
 
 export function fetchTrails() {
   return (dispatch) => {

@@ -32,7 +32,6 @@ const CreateTrail = () => {
   return (
     <>
       <div className="fullview-container">
-        {/* <Link to={'/trailjournal/:name'}> */}
         <div className="create-trail">
           <form onSubmit={handleSubmit}>
             <h2>New entry</h2>
@@ -85,7 +84,6 @@ const CreateTrail = () => {
             <button>Add to trails</button>
           </form>
         </div>
-        {/* </Link> */}
       </div>
     </>
   )
