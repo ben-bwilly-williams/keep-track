@@ -13,6 +13,12 @@ import MySetup from './MySetup'
 import TrailFullView from './TrailFullView'
 import CreateTrail from './CreateTrail'
 
+// delete entry
+// update entry
+// search/filter by region, grade
+// location radius
+// link to Trailforks API
+
 const App = () => {
   const dispatch = useDispatch()
 
