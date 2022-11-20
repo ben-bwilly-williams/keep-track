@@ -25,9 +25,9 @@ export function fetchTrails() {
   }
 }
 
-export function createTrail(newSubmission) {
+export function createTrail(newTrail) {
   return (dispatch) => {
-    return addNewTrail(newSubmission)
+    return addNewTrail(newTrail)
       .then((res) => {
         dispatch(showTrails(res))
       })

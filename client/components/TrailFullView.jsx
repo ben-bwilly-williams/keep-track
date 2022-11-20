@@ -2,7 +2,6 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { useParams, useNavigate } from 'react-router-dom'
-
 import { deleteTrail } from '../actions'
 
 const TrailFullView = () => {
@@ -20,9 +19,7 @@ const TrailFullView = () => {
 
   const currentTrail = trails.find((trail) => trail.id == id)
 
-  return !currentTrail ? (
-    <div></div>
-  ) : (
+  return (
     <>
       <div className="fullview-container">
         <div className="full-trail">
