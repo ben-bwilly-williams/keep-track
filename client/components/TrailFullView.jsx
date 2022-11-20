@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
 import { useParams, useNavigate } from 'react-router-dom'
+
 import { removeTrail } from '../actions'
 
 const TrailFullView = () => {
@@ -12,8 +12,7 @@ const TrailFullView = () => {
   const trails = useSelector((state) => state.trails)
 
   function handleDelete(e) {
-    const trailId = currentTrail.id
-    dispatch(removeTrail(trailId))
+    dispatch(removeTrail(currentTrail.id))
     e.preventDefault()
     navigate('/trailjournal')
   }

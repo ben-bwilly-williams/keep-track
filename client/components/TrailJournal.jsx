@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom'
 
 import TrailCard from './TrailCard'
 
-// delete entry
-// update entry
-// search/filter by region, grade
-// location radius
-// link to Trailforks API
-
 const TrailJournal = () => {
   return (
     <>
