@@ -26,7 +26,6 @@ const CreateTrail = () => {
       date,
     }
     dispatch(createTrail(newTrail))
-    // dispatch(addTrail(newTrail))
     navigate('/trailjournal')
   }
 

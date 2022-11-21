@@ -14,13 +14,13 @@ export function addTrail(newTrail) {
   }
 }
 
-// export function deleteTrail(trailId) {
-//   console.log(trailId)
-//   return {
-//     type: 'DEL_TRAIL',
-//     payload: trailId,
-//   }
-// }
+export function deleteTrail(trailId) {
+  console.log(trailId)
+  return {
+    type: 'DEL_TRAIL',
+    payload: trailId,
+  }
+}
 
 export function fetchTrails() {
   return (dispatch) => {
@@ -46,6 +46,7 @@ export function createTrail(newTrail) {
 
 export function removeTrail(trailId) {
   return (dispatch) => {
+    dispatch(deleteTrail(trailId))
     return removeCurrentTrail(trailId)
       .then((res) => {
         dispatch(fetchTrails(res))
