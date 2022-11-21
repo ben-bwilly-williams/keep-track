@@ -7,6 +7,13 @@ export function showTrails(trails) {
   }
 }
 
+export function addTrail(newTrail) {
+  return {
+    type: 'ADD_TRAIL',
+    payload: newTrail,
+  }
+}
+
 // export function deleteTrail(trailId) {
 //   console.log(trailId)
 //   return {
@@ -28,6 +35,7 @@ export function fetchTrails() {
 
 export function createTrail(newTrail) {
   return (dispatch) => {
+    dispatch(addTrail(newTrail))
     return addNewTrail(newTrail)
       .then((res) => {
         dispatch(showTrails(res))

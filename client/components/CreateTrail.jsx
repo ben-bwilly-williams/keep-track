@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createTrail } from '../actions'
+import { createTrail, addTrail } from '../actions'
 import { useNavigate } from 'react-router-dom'
 
 // import {createTrail} from '../actions/index'
@@ -26,6 +26,7 @@ const CreateTrail = () => {
       date,
     }
     dispatch(createTrail(newTrail))
+    // dispatch(addTrail(newTrail))
     navigate('/trailjournal')
   }
 
