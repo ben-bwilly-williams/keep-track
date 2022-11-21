@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createTrail } from '../actions'
+import { createTrail, addTrail } from '../actions'
 import { useNavigate } from 'react-router-dom'
 
 // import {createTrail} from '../actions/index'
@@ -26,6 +26,7 @@ const CreateTrail = () => {
       date,
     }
     dispatch(createTrail(newTrail))
+    // dispatch(addTrail(newTrail))
     navigate('/trailjournal')
   }
 
@@ -44,7 +45,7 @@ const CreateTrail = () => {
               <option defaultValue hidden value="gradeIcon">
                 Difficulty
               </option>
-              <option value="grade-2.png">2 – Easy</option>
+              <option value="grade-2.png">2 – Beginner</option>
               <option value="grade-3.png">3 – Intermediate</option>
               <option value="grade-4.png">4 – Advanced</option>
               <option value="grade-5.png">5 – Expert</option>
