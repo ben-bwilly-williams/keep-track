@@ -19,10 +19,12 @@ const TrailFullView = () => {
 
   const currentTrail = trails.find((trail) => trail.id == id)
 
-  const index = trails.indexOf(currentTrail)
-  let nextTrail = trails[index + 1].id
-  let previousTrail = trails[index - 1].id
-  console.log(index)
+  // WORK ON PREVIOUS/NEXT BUTTONS
+
+  // const index = trails.indexOf(currentTrail)
+  // let nextTrail = trails[index + 1].id
+  // let previousTrail = trails[index - 1].id
+  // console.log(index)
 
   // if (index === trails.length) nextTrail = trails[trails.length].id
   // if (index === 0) previousTrail = trails[0].id
@@ -30,9 +32,9 @@ const TrailFullView = () => {
   return (
     <>
       <div className="fullview-container">
-        <Link to={`/trailjournal/${previousTrail}`}>
+        {/* <Link to={`/trailjournal/${previousTrail}`}>
           <button disabled={index == 0}>Previous</button>
-        </Link>
+        </Link> */}
         <div className="full-trail">
           <img src={`/images/${currentTrail.gradeIcon}`} alt="Grade icon" />
           <h2>{currentTrail.trailName}</h2>
@@ -49,9 +51,9 @@ const TrailFullView = () => {
           </button>
         </div>
         <div>
-          <Link to={`/trailjournal/${nextTrail}`}>
+          {/* <Link to={`/trailjournal/${nextTrail}`}>
             <button disabled={index == trails.length - 1}>Next</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>
