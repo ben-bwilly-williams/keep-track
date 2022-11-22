@@ -12,7 +12,7 @@ const trailReducer = (state = initialTrailState, action) => {
     // case 'UPDATE_TRAIL':
     //   return state.map((trail) =>
     //     trail === payload.current ? payload.update : trail
-    // )
+    //   )
     default:
       return state
   }

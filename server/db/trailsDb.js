@@ -13,6 +13,10 @@ function deleteTrail(id, db = connection) {
   return db('trails').where({ id }).del()
 }
 
+function updateTrail(id, newInfo, db = connection) {
+  return db('trails').where({ id }).update(newInfo)
+}
+
 function close(db = connection) {
   db.destroy()
 }
@@ -21,5 +25,6 @@ module.exports = {
   getTrails,
   addTrail,
   deleteTrail,
+  updateTrail,
   close,
 }

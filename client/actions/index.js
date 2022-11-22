@@ -1,4 +1,9 @@
-import { getTrails, addNewTrail, removeCurrentTrail } from '../apiClient'
+import {
+  getTrails,
+  addNewTrail,
+  removeCurrentTrail,
+  updateCurrentTrail,
+} from '../apiClient'
 
 export function showTrails(trails) {
   return {
@@ -19,6 +24,13 @@ export function deleteTrail(trailId) {
   return {
     type: 'DEL_TRAIL',
     payload: trailId,
+  }
+}
+
+export function updateTrail(current, update) {
+  return {
+    type: 'UPDATE_TRAIL',
+    payload: { current: current, update: update },
   }
 }
 
@@ -54,3 +66,14 @@ export function removeTrail(trailId) {
       .catch((err) => console.error(err.message))
   }
 }
+
+// export function editTrail(current, update) {
+//   return (dispatch) => {
+//     dispatch(updateTrail(current, update))
+//     return updateCurrentTrail(current, update)
+//       .then((res) => {
+//         dispatch(fetchTrails(res))
+//       })
+//       .catch((err) => console.error(err.message))
+//   }
+// }

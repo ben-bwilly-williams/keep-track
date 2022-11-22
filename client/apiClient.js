@@ -18,3 +18,13 @@ export function addNewTrail(newTrail) {
 export function removeCurrentTrail(id) {
   return request.del(`/api/v1/trails/${id}`)
 }
+
+// export function updateCurrentTrail(current, update) {
+//   return request
+//     .patch(`/api/v1/trails/${current}`)
+//     .send(update)
+//     .then((res) => {
+//       return res.body
+//     })
+//     .catch((err) => console.error(err.message))
+// }

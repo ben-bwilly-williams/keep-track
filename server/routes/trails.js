@@ -31,3 +31,11 @@ router.delete('/:id', (req, res) => {
     })
     .catch((err) => console.error(err.message))
 })
+
+// router.patch('/:id', (req, res) => {
+//   db.updatePost(req.params.id, req.body)
+//   .then((newTrail) => {
+//     res.json(newTrail)
+//   })
+//   .catch((err) => console.error(err.message))
+// })
