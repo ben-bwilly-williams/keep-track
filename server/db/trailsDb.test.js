@@ -31,16 +31,31 @@ describe('getTrails', () => {
   })
 })
 
-// describe('addTrail', () => {
-//   test('gets all trails from db', () => {
-//     const newTrail = {
-//       gradeIcon: 'grade-5.png',
-//       trailName: 'Moustache Express',
-//     }
-//     return addTrail(newTrail).then(() => {
-//       return getTrails(testDb).then((trails) => {
-//         expect(trails).toHaveLength(5)
-//       })
-//     })
-//   })
-// })
+describe('addTrail', () => {
+  it('adds new trail to db', () => {
+    const newTrail = { trailName: 'Tombstone' }
+    return addTrail(newTrail, testDb)
+      .then(() => {
+        return getTrails(testDb)
+      })
+      .then((trails) => {
+        expect(trails).toHaveLength(4)
+        expect(trails[3].trailName).toBe('Tombstone')
+      })
+  })
+})
+
+describe('deleteTrail', () => {
+  it('deletes trail from db', () => {
+    const id = 2
+    return deleteTrail(id, testDb)
+      .then(() => {
+        return getTrails(testDb)
+      })
+      .then((trails) => {
+        console.log(trails)
+        expect(trails).toHaveLength(2)
+        expect(trails[1].id).toBe(3)
+      })
+  })
+})

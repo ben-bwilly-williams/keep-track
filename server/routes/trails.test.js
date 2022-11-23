@@ -3,10 +3,13 @@ const request = require('supertest')
 const db = require('../db/trailsDb')
 jest.mock('../db/trailsDb')
 
+jest.spyOn(console, 'error').mockImplementation(() => {})
+
+beforeEach(() => {
+  jest.resetAllMocks()
+})
+
 describe('get trails', () => {
-  afterEach(() => {
-    jest.clearAllMocks()
-  })
   test('return trails in json', () => {
     db.getTrails.mockReturnValue(
       Promise.resolve([
@@ -21,17 +24,3 @@ describe('get trails', () => {
       })
   })
 })
-
-// describe('add trail', () => {
-//   test('add trail then return in json', () => {
-//     db.addTrail.mockReturnValue(
-//       Promise.resolve({ gradeIcon: 'grade-5.png', trailName: 'Ginger Cougar' })
-//     )
-//     return request(server)
-//       .get('/api/v1/trails')
-//       .then((res) => {
-//         // console.log(res.body)
-//         expect(res.body).toBeInTheDocument()
-//       })
-//   })
-// })
