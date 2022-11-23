@@ -2,7 +2,7 @@ import {
   getTrails,
   addNewTrail,
   removeCurrentTrail,
-  updateCurrentTrail,
+  // updateCurrentTrail,
 } from '../apiClient'
 
 export function showTrails(trails) {

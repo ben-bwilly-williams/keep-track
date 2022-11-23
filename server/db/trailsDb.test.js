@@ -53,7 +53,6 @@ describe('deleteTrail', () => {
         return getTrails(testDb)
       })
       .then((trails) => {
-        console.log(trails)
         expect(trails).toHaveLength(2)
         expect(trails[1].id).toBe(3)
       })

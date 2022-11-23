@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createTrail, addTrail } from '../actions'
+import { createTrail } from '../actions'
 import { useNavigate } from 'react-router-dom'
 
 // import {createTrail} from '../actions/index'

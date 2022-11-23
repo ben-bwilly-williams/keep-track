@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 const Home = () => {
   return (
     <>
-      <img className="dirt-pic" src="/images/dirt-roots.jpg" alt="" />
+      <img className="dirt-pic" src="/images/dirt-roots.jpg" alt="Tree roots" />
       <div className="masthead-wrap">
         <h1 className="masthead">
           Keep <br />
           Track.
         </h1>
-        <h3 className="subhead">The mountain biker's trail diary.</h3>
+        <h3 className="subhead">The mountain biker&apos;s trail diary.</h3>
       </div>
     </>
   )
