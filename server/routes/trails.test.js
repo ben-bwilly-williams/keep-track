@@ -9,7 +9,7 @@ beforeEach(() => {
   jest.resetAllMocks()
 })
 
-describe('get trails', () => {
+describe('/GET/api/v1/trails', () => {
   test('return trails in json', () => {
     db.getTrails.mockReturnValue(
       Promise.resolve([
@@ -21,6 +21,16 @@ describe('get trails', () => {
       .get('/api/v1/trails')
       .then((res) => {
         expect(res.body).toHaveLength(2)
+        expect(res.status).toBe(200)
       })
   })
+  // test('returns 500 and logs error message when error', () => {
+  //   db.getTrails.mockImplementation(() => Promise.reject('No trails for you'))
+  //   return request(server)
+  //     .get('/api/v1/trails')
+  //     .then((res) => {
+  //       expect(res.status).toBe(500)
+  //       expect(console.error).toHaveBeenCalledWith('No trails for you')
+  //     })
+  // })
 })
