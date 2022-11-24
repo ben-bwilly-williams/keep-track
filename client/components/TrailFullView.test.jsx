@@ -9,12 +9,6 @@ import { useSelector, useDispatch } from 'react-redux'
 
 jest.mock('react-redux')
 
-//1. integration test
-//make a fakeStore (or a real one) and give it to a real provider from react-redux
-
-//2. unit test
-//mock out react redux hooks
-
 useSelector.mockReturnValue([
   { trailOne: 'Coronation St', trailTwo: 'Tin Man' },
 ])
